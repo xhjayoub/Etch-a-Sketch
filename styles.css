@@ -1,0 +1,19 @@
+.square {
+    background-color: black;
+    width: 30px;
+    height: 30px;
+}
+
+.container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 650px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
