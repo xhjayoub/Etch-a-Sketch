@@ -14,7 +14,7 @@ function generateSquares(n) {
     const arrDivs = document.querySelectorAll(".square");
     arrDivs.forEach((e) => {
         e.addEventListener('mouseover',() => {
-        e.style.backgroundColor = "blue";
+        e.style.backgroundColor = `rgb(${randomN(255)},${randomN(255)},${randomN(255)})`;
     })
 })
 }
@@ -28,7 +28,9 @@ function getSquaresNum() {
     return parseInt(num);
 }
 
-
+function randomN(n) {
+    return Math.floor(Math.random() * 255);
+}
 
 
 generateSquares(16);
