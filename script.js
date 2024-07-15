@@ -20,7 +20,12 @@ function generateSquares(n) {
 }
 
 function getSquaresNum() {
-    return parseInt(document.querySelector("#squaresNum").value);
+    let num = document.querySelector("#squaresNum").value;
+    if (num > 100) {
+        alert("Enter a number less than 100!");
+        return false;
+    }
+    return parseInt(num);
 }
 
 
