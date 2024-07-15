@@ -1,6 +1,7 @@
 function CreateDiv() {
     const div = document.createElement("div");
     div.setAttribute("class", "square");
+    div.setAttribute("interaction", 0);
     return div;
 }
 
@@ -14,7 +15,11 @@ function generateSquares(n) {
     const arrDivs = document.querySelectorAll(".square");
     arrDivs.forEach((e) => {
         e.addEventListener('mouseover',() => {
-        e.style.backgroundColor = `rgb(${randomN(255)},${randomN(255)},${randomN(255)})`;
+            let numInteraction = parseInt(e.getAttribute("interaction"));
+            numInteraction++;
+            e.setAttribute("interaction",numInteraction);
+            e.style.opacity = `${10*numInteraction}%`;
+            e.style.backgroundColor = `rgb(${randomN(255)},${randomN(255)},${randomN(255)})`;
     })
 })
 }
