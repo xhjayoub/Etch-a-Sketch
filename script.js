@@ -5,8 +5,8 @@ function CreateDiv() {
 }
 
 
-const body = document.querySelector("body");
+const container = document.querySelector(".container");
 
-for (let i = 0; i<16 ; i++) {
-    body.appendChild(CreateDiv())
+for (let i = 0; i<32 ; i++) {
+    container.appendChild(CreateDiv())
 }
