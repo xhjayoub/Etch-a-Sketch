@@ -31,3 +31,26 @@ function randomN(n) {
 }
 
 generateSketch(16);
+
+function getSquaresNum() {
+    let num = document.querySelector("#squaresNum").value;
+    if (num > 100) {
+        alert("Enter a number less than 100!");
+        return false;
+    }
+    return parseInt(num);
+}
+
+
+const generateBtn = document.querySelector("#generate");
+generateBtn.addEventListener("click",() => {
+    document.querySelector(".container").innerHTML = "";
+    generateSketch(getSquaresNum());
+})
+
+const resetBtn = document.querySelector("#reset");
+resetBtn.addEventListener("click", () => {
+    document.querySelector(".container").innerHTML = "";
+    generateSketch(16);
+    document.querySelector("#squaresNum").value = 16;
+})
