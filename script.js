@@ -7,7 +7,6 @@ function createSquare(n, width, height) {
         let interaction = parseInt(div.getAttribute("interaction"));
         div.style.opacity = `${interaction}%`;
         interaction += 10;
-        console.log(interaction);
         div.setAttribute("interaction",interaction);
         div.style.backgroundColor = `rgb(${randomN(255)},${randomN(255)},${randomN(255)})`;
     })
