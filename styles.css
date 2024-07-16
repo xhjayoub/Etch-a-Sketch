@@ -1,4 +1,14 @@
 .container {
     width: 600px;
     height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.square {
+    border: 1px solid red;
+    flex: 1;
+}
+.row {
+    display: flex;
+    flex: 1;
 }
