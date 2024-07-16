@@ -1,8 +1,14 @@
 function createSquare(n, width, height) {
     const div = document.createElement("div");
     div.setAttribute("class","square");
+    div.setAttribute("interaction","10");
     div.style.cssText = `height: ${height / n}px; width: ${width / n}px;`;
     div.addEventListener("mouseover" , () => {
+        let interaction = parseInt(div.getAttribute("interaction"));
+        div.style.opacity = `${interaction}%`;
+        interaction += 10;
+        console.log(interaction);
+        div.setAttribute("interaction",interaction);
         div.style.backgroundColor = `rgb(${randomN(255)},${randomN(255)},${randomN(255)})`;
     })
     return div;
