@@ -4,6 +4,9 @@ function createSquare(n, width, height) {
     div.setAttribute("class","square");
     console.log(`height: ${height / n}px; width: ${width / n}px;`);
     div.style.cssText = `height: ${height / n}px; width: ${width / n}px;`;
+    div.addEventListener("mouseover" , () => {
+        div.style.backgroundColor = `rgb(${randomN(255)},${randomN(255)},${randomN(255)})`;
+    })
     return div;
 }
 
@@ -25,4 +28,9 @@ function generateSketch(n) {
         container.appendChild(createRow(n,containerWidth, containerHeight))
     }
 }
-generateSketch(10);
+
+function randomN(n) {
+    return Math.floor(Math.random() * 255);
+}
+
+generateSketch(16);
