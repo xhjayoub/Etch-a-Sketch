@@ -34,9 +34,13 @@ generateSketch(16);
 
 function getSquaresNum() {
     let num = document.querySelector("#squaresNum").value;
+    if (num === '') {
+        alert("Enter a number!");
+        return 16;
+    }
     if (num > 100) {
         alert("Enter a number less than 100!");
-        return false;
+        return 16;
     }
     return parseInt(num);
 }
