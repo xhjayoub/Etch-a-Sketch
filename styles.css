@@ -3,8 +3,11 @@
     height: 600px;
     display: flex;
     flex-wrap: wrap;
+    border: 1px solid black;
+    box-sizing: border-box;
 }
 .square {
+    box-sizing: border-box;
     border: 1px solid red;
     flex: 1;
 }
