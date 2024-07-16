@@ -1,8 +1,6 @@
 function createSquare(n, width, height) {
-    console.log(width, height)
     const div = document.createElement("div");
     div.setAttribute("class","square");
-    console.log(`height: ${height / n}px; width: ${width / n}px;`);
     div.style.cssText = `height: ${height / n}px; width: ${width / n}px;`;
     div.addEventListener("mouseover" , () => {
         div.style.backgroundColor = `rgb(${randomN(255)},${randomN(255)},${randomN(255)})`;
@@ -11,7 +9,6 @@ function createSquare(n, width, height) {
 }
 
 function createRow(n,containerWidth, containerHeight) {
-    console.log(containerHeight, containerWidth)
     const div = document.createElement("div");
     div.setAttribute("class","row");
     for (let i = 0; i<n; i++) {
