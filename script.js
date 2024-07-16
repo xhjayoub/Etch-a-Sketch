@@ -12,3 +12,10 @@ function createRow(n) {
     }
     return div;
 }
+
+function generateSketch(n) {
+    const container = document.querySelector(".container");
+    for (let i = 0; i<n; i++) {
+        container.appendChild(createRow(n))
+    }
+}
